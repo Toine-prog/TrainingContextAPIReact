@@ -1,3 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
+  margin: 1% 10%;
+}
+
+ a {
+  text-decoration: none;
+  color: rgb(54, 54, 165);
+ }
+
+.menu {
+  display: flex;
+  column-gap: 25px;
+  font-size: 18px;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.menu a {
+  transition: all 0.2s ease-in;
+}
+
+.menu a:hover {
+  color: rgb(22, 22, 118);
+  scale: 1.1;
+}
+
+.page {
   text-align: center;
 }
