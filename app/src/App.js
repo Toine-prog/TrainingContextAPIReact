@@ -10,17 +10,18 @@ import { NavMenu } from './components';
 import { useDarkMode } from './useDarkMode';
 
 
-export const ThemeContext = React.createContext();
+const ThemeContext = React.createContext(null);
+export { ThemeContext};
 
 function App() {
 
   const {theme, changeMode} = useDarkMode()
 
   return (
-    <ThemeContext.Provider value={[theme, changeMode]}>
+    <ThemeContext.Provider value={{theme, changeMode}}>
     <div className="App" style={{background: theme.background, color: theme.foreground}}>
       <Router>
-        <NavMenu changeMode={changeMode} theme={theme}/>
+        <NavMenu />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/page1' element={<Page1 />} />
