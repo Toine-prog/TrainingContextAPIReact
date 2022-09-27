@@ -5,13 +5,17 @@
 }
 
 .App {
-  margin: 1% 10%;
+  padding: 1% 10%;
 }
 
- a {
-  text-decoration: none;
-  color: rgb(54, 54, 165);
- }
+a {
+text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 25px;
+}
 
 .menu {
   display: flex;

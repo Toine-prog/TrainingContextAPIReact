@@ -18,9 +18,9 @@ function App() {
 
   return (
     <ThemeContext.Provider value={[theme, changeMode]}>
-    <div className="App" style={{background: theme.background}}>
+    <div className="App" style={{background: theme.background, color: theme.foreground}}>
       <Router>
-        <NavMenu changeMode= {changeMode}/>
+        <NavMenu changeMode={changeMode} theme={theme}/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/page1' element={<Page1 />} />

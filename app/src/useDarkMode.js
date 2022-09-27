@@ -2,12 +2,12 @@ import { useState } from 'react';
 
 const themes = {
   light: {
-    foreground: "#000000",
-    background: "#eeeeee"
+    foreground: "#161616",
+    background: "#fcfcfc"
   },
   dark: {
-    foreground: "#ffffff",
-    background: "#222222"
+    foreground: "#E4E4E4",
+    background: "#121212"
   }
 };
 
