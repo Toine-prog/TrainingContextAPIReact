@@ -8,8 +8,18 @@
   padding: 1% 10%;
 }
 
+ul li {
+  list-style: none;
+}
+
 a {
-text-decoration: none;
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 button {

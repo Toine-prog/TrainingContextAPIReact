@@ -31,7 +31,6 @@ const cities = [
 const WEATHER_API_KEY = "eaea3a0c292ca39cb5e5272736989424";
 
 const kelvinToDegre = (kelvin) => {
-  console.log("kelvin", kelvin);
   return (kelvin - 273).toFixed(1);
 };
 // Afficher la météo d'un pays aléatoirement
