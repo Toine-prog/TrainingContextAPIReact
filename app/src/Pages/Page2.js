@@ -23,7 +23,6 @@ const Page2 = () => {
             mdp={dataForm.mdp}
           />
         )}{" "}
-        : {}
       </div>
     </div>
   );
