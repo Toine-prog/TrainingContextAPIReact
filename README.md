@@ -9,4 +9,3 @@ Application très simple avec utilisation de Router et ContextAPI
 - react-query + Axios
 - custom hook darkMode
 - react-formulaire
-- React useRef

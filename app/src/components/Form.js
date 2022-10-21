@@ -1,20 +1,26 @@
-import React, { useRef } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
 
-const Form = () => {
-  const formData = useRef(null);
+const Form = ({ saveData }) => {
+  const { register, handleSubmit } = useForm();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    //TODO: Utilsier https://codesandbox.io/s/vmwxjnv433?file=/src/index.js:237-255 pour gérer le ref du form
+  const onSubmit = (data) => {
+    console.log(data);
+
+    saveData(data);
   };
   return (
     <div>
-      <form ref={formData} onSubmit={handleSubmit}>
-        <input type="text" placeholder="Full Name..." />
-        <input type="text" placeholder="Email..." />
-        <input type="number" placeholder="Age..." />
-        <input type="password" placeholder="password..." />
-        <input type="password" placeholder="Confirm password..." />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input type="text" placeholder="Full Name..." {...register("name")} />
+        <input type="text" placeholder="Email..." {...register("email")} />
+        <input type="number" placeholder="Age..." {...register("age")} />
+        <input type="password" placeholder="password..." {...register("mdp")} />
+        <input
+          type="password"
+          placeholder="Confirm password..."
+          {...register("mdpConfirm")}
+        />
         <input type="submit" />
       </form>
     </div>
